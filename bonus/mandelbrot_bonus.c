@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mandelbrot.c                                       :+:      :+:    :+:   */
+/*   mandelbrot_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heljary <heljary@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 03:14:04 by heljary           #+#    #+#             */
-/*   Updated: 2025/03/13 03:20:15 by heljary          ###   ########.fr       */
+/*   Updated: 2025/03/13 01:55:10 by heljary          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fractol_bonus.h"
 #define HEIGHT 800
 #define WIDTH 800
 
@@ -77,7 +77,7 @@ void	mandelbrot_window(void)
 			&mlx_mandelbrot.bpp, &mlx_mandelbrot.line_len,
 			&mlx_mandelbrot.endian);
 	design_mandelbrot(&mlx_mandelbrot);
-	mlx_hook(mlx_mandelbrot.win, 2, 1, handle_key, &mlx_mandelbrot);
+	mlx_hook(mlx_mandelbrot.win, 2, 1L << 0, handle_key, &mlx_mandelbrot);
 	mlx_mouse_hook(mlx_mandelbrot.win, mouse_hook, &mlx_mandelbrot);
 	mlx_put_image_to_window(mlx_mandelbrot.mlx, mlx_mandelbrot.win,
 		mlx_mandelbrot.img, 0, 0);

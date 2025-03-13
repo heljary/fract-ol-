@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_function.c                                   :+:      :+:    :+:   */
+/*   utils_function_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heljary <heljary@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 03:14:24 by heljary           #+#    #+#             */
-/*   Updated: 2025/03/12 02:48:17 by heljary          ###   ########.fr       */
+/*   Updated: 2025/03/12 22:16:00 by heljary          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fractol_bonus.h"
 
 double	check_calcul(char *str, int i)
 {

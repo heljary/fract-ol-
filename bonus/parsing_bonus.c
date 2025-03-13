@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
+/*   parsing_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heljary <heljary@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/03 03:14:18 by heljary           #+#    #+#             */
-/*   Updated: 2025/03/12 14:56:04 by heljary          ###   ########.fr       */
+/*   Created: 2025/03/13 01:39:42 by heljary           #+#    #+#             */
+/*   Updated: 2025/03/13 01:56:06 by heljary          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fractol_bonus.h"
 
 int	ft_isdigit(int c)
 {
@@ -66,8 +66,8 @@ int	check_param(char **param)
 
 int	main(int ac, char **av)
 {
-	double	num_1;
-	double	num_2;
+	double		num_1;
+	double		num_2;
 
 	num_1 = ft_atoi(av[2]);
 	num_2 = ft_atoi(av[3]);
@@ -79,6 +79,8 @@ int	main(int ac, char **av)
 			return (1);
 		julia_window(num_1, num_2);
 	}
+	else if (ft_strcmp(av[1], "cmandelbrot") == 0 && ac == 2)
+		cubic_mandelbrot_window();
 	else
 		exit(0);
 }
